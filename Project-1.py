@@ -1,17 +1,15 @@
-#calculator
+import random
 
-num_1 = int(input("Enter the first number: "))
-num_2 = int(input("Enter the second number: "))
-op = input("Enter the operator: ")
+n = random.randrange(1,100)
+guess = int(input("Enter any number: "))
+while n!= guess:
 
-#if_statement
-
-if op == "+":
-    print(str("The answer is") (num_1 + num_2))
-if op == "-":
-    print(str("The answer is") (num_1 - num_2))
-if op == "/":
-    print(str("The answer is") (num_1 / num_2))
-if op == "*":
-    print(str("The answer is") (num_1 * num_2))
-
+    if guess < n:
+        print("Too low")
+        guess = int(input("Enter number again: "))
+    elif guess > n:
+        print("Too high!")
+        guess = int(input("Enter number again: "))
+    else:
+        break
+print("you guessed it right!!")
